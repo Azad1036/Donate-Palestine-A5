@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Palestine</title>
 
+    <!-- FavIcon -->
+     <link rel="icon" type="icons" href="./logo.png">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -27,7 +30,7 @@
       }
     </style>
   </head>
-  <body class="bg-[#F9F7F3] lixend-font">
+  <body class="bg-[#F9F7F3] lixend-font h-dvh">
     <header>
       <!-- Navbar Section -->
       <nav class="py-6 px-10">
@@ -57,14 +60,27 @@
                 <li>Donate-Palestine</li>
               </ul>
             </div>
-            <a class="btn bg-[#B4F461] text-xl">Blog</a>
+            <button id="blog-btn" class="btn bg-[#B4F461] text-xl">Blog</button>
+            <button id="home-btn" class="btn bg-[#B4F461] text-xl hidden">
+              Home
+            </button>
           </div>
           <div class="navbar-center hidden lg:flex">
-            <p class="text-xl font-semibold">Donate-Palestine</p>
+            <div class="flex items-center justify-center gap-2">
+              <div class="w-6">
+                <img src="./assets/logo.png" alt="" />
+              </div>
+              <p class="text-xl font-semibold">Donate-Palestine</p>
+            </div>
           </div>
           <div class="navbar-end">
             <span class="text-[#111111B3] text-xl font-medium">
-              <span id="donate-total-amounts">1000000</span> BDT
+              <div class="flex items-center justify-center gap-1">
+                <div class=>
+                  <img src="./assets/coin.png" alt="" />
+                </div>
+                <span id="donate-total-amounts">1000000</span> BDT
+              </div>
             </span>
           </div>
         </div>
@@ -72,7 +88,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="lg:py-10 py-5 px-10">
+    <main id="main-page" class="lg:py-10 py-5 px-10">
       <!-- Donation Buttons -->
       <div class="text-center space-x-4">
         <button id="donation" class="btn btn-warning">Donation</button>
@@ -95,7 +111,12 @@
             </div>
             <div class="flex flex-col justify-between h-full">
               <p class="text-lg font-semibold">
-                <span id="total-donate-one">0</span> BDT
+                <div class="flex items-center gap-2">
+                <div >
+                  <img src="./assets/coin.png" alt="" />
+                </div>
+                <span id="total-donate-one" class="text-xl">0</span>BDT
+              </div>
               </p>
               <h3 id="donate-title-one" class="text-xl font-bold lg:my-4 my-2">
                 Gaza Crisis Aid Relief
@@ -137,7 +158,12 @@
           </div>
           <div class="flex flex-col justify-between h-full">
             <p class="text-lg font-semibold">
-              <span id="total-donate-tow">0</span> BDT
+              <div class="flex items-center gap-2">
+                <div >
+                  <img src="./assets/coin.png" alt="" />
+                </div>
+                <span id="total-donate-tow" class="text-xl">0</span>BDT
+              </div>
             </p>
             <h3 id="donate-title-tow" class="text-xl font-bold lg:my-4 my-2">
               Emergency Relief for Gaza Families
@@ -178,7 +204,12 @@
           </div>
           <div class="flex flex-col justify-between h-full">
             <p class="text-lg font-semibold">
-              <span id="total-donate-three">0</span> BDT
+              <div class="flex items-center gap-2">
+                <div >
+                  <img src="./assets/coin.png" alt="" />
+                </div>
+                <span id="total-donate-three" class="text-xl">0</span>BDT
+              </div>
             </p>
             <h3 id="donate-title-three" class="text-xl font-bold lg:my-4 my-2">
               Help Save Lives in Gaza: Donate Now
@@ -218,7 +249,12 @@
           </div>
           <div class="flex flex-col justify-between h-full">
             <p class="text-lg font-semibold">
-              <span id="total-donate-four">0</span> BDT
+              <div class="flex items-center gap-2">
+                <div >
+                  <img src="./assets/coin.png" alt="" />
+                </div>
+                <span id="total-donate-four" class="text-xl">0</span>BDT
+              </div>
             </p>
             <h3 id="donate-title-four" class="text-xl font-bold lg:my-4 my-2">
               Shelter for Gaza: Provide Homes, Hope, and Healing
@@ -258,7 +294,12 @@
           </div>
           <div class="flex flex-col justify-between h-full">
             <p class="text-lg font-semibold">
-              <span id="total-donate-five">0</span> BDT
+              <div class="flex items-center gap-2">
+                <div >
+                  <img src="./assets/coin.png" alt="" />
+                </div>
+                <span id="total-donate-five" class="text-xl">0</span>BDT
+              </div>
             </p>
             <h3 id="donate-title-five" class="text-xl font-bold lg:my-4 my-2">
               Stand with Gaza: Together We Can Make a Difference
@@ -298,7 +339,12 @@
           </div>
           <div class="flex flex-col justify-between h-full">
             <p class="text-lg font-semibold">
-              <span id="total-donate-six">0</span> BDT
+              <div class="flex items-center gap-2">
+                <div >
+                  <img src="./assets/coin.png" alt="" />
+                </div>
+                <span id="total-donate-six" class="text-xl">0</span>BDT
+              </div>
             </p>
             <h3 id="donate-title-six" class="text-xl font-bold lg:my-4 my-2">
               Rescue Gaza: Emergency Aid for Vulnerable Families
@@ -367,8 +413,97 @@
       <div id="history-added" class="hidden mt-6"></div>
     </main>
 
+    <footer class="hidden" id="faq-body">
+      <div class="py-6 px-10">
+        <h1 class="text-4xl font-bold mb-8">Improtant Feq</h1>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-2xl font-medium">
+            Why is it important to donate to the people of Palestine?
+          </div>
+          <div class="collapse-content">
+            <p>
+              The ongoing crisis and conflict in Palestine have displaced many
+              people, leaving them without shelter, food, medical care, and
+              basic necessities. Your donation can help provide essential
+              supplies, such as food, water, and emergency medical kits, which
+              are critical for the survival and well-being of affected families.
+              Even small contributions can make a significant difference in
+              improving their lives.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How can I be sure that my donation will reach the right place?
+          </div>
+          <div class="collapse-content">
+            <p>
+              You can ensure your donation reaches the right place by donating
+              through trusted and transparent organizations. Many organizations
+              provide receipts and reports that allow donors to track where
+              their funds are going. It's important to research and choose
+              reliable NGOs and charity organizations with a good track record
+              of delivering aid.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            Can I donate something other than money, like food or medical
+            supplies?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Yes, many organizations accept food, medical kits, clothing, and
+              other essential items. If you prefer to donate goods rather than
+              money, you can contact the charity you want to support and inquire
+              about the specific items they need. They will often have a list of
+              items that are in high demand.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            Do I need to donate a large amount, or are small donations also
+            important?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Small donations are just as important as large ones. Even a small
+              contribution can make a big impact when combined with others. Many
+              small donations can collectively support a larger cause, and every
+              bit helps in providing relief to those in need. No donation is too
+              small to make a difference.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            Are there specific projects for donating to in Palestine?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Yes, there are various specific projects aimed at providing relief
+              to the people of Palestine. Some focus on food distribution,
+              healthcare, education, and shelter. Before donating, you can
+              review the organization’s projects to see how your contribution
+              will be used. You can also choose a project that aligns with your
+              interests, whether it's providing emergency aid or supporting
+              long-term recovery efforts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- JavaScript -->
-    <script src="./Js/donate.js"></script>
+    <script src="./Js/donateHistory.js"></script>
     <script src="./Js/comonFunction.js"></script>
+    <script src="./Js/faq.js"></script>
   </body>
 </html>

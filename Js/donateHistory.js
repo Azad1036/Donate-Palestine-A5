@@ -31,6 +31,11 @@ const show = document
 const modal = document.getElementById("modal");
 const closeModal = document.getElementById("closeModal");
 
+// Close Modal
+closeModal.addEventListener("click", function () {
+  modal.classList.add("hidden");
+});
+
 // Donation Card Function
 // Card 1
 document
@@ -307,8 +312,3 @@ document
       alert("Please enter a valid positive amount!");
     }
   });
-
-// Close Modal
-closeModal.addEventListener("click", function () {
-  modal.classList.add("hidden");
-});
