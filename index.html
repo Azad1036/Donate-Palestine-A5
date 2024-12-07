@@ -75,48 +75,256 @@
     <main class="lg:py-10 py-5 px-10">
       <!-- Donation Buttons -->
       <div class="text-center space-x-4">
-        <button class="btn btn-warning">Donation</button>
-        <button class="btn btn-primary">History</button>
+        <button id="donation" class="btn btn-warning">Donation</button>
+        <button id="History" class="btn btn-primary">History</button>
       </div>
 
       <!-- Donation Card -->
-      <!-- Card 1 -->
-      <div
-        class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 border border-[#1111111A] rounded-2xl lg:mt-8 mt-4"
-      >
-        <div class="w-full rounded-xl h-full">
-          <img
-            class="w-full h-full object-cover rounded-xl"
-            src="./assets/d1.jpeg"
-            alt="Gaza Crisis Aid"
-          />
+      <div id="donaion-cards">
+        <!-- Card 1 -->
+        <div>
+          <div
+            class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 border border-[#1111111A] rounded-2xl lg:mt-8 mt-4"
+          >
+            <div class="w-full rounded-xl h-full">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="./assets/d1.jpeg"
+                alt="Gaza Crisis Aid"
+              />
+            </div>
+            <div class="flex flex-col justify-between h-full">
+              <p class="text-lg font-semibold">
+                <span id="total-donate-one">0</span> BDT
+              </p>
+              <h3 id="donate-title-one" class="text-xl font-bold lg:my-4 my-2">
+                Gaza Crisis Aid Relief
+              </h3>
+              <p class="font-light lg:mb-4 mb-2">
+                The ongoing conflict in Gaza has left countless families without
+                shelter, food, and medical care. Your generous donation can
+                provide essential supplies, such as food, water, and emergency
+                medical kits, to those who are suffering. Every small
+                contribution will make a significant impact.
+              </p>
+              <div>
+                <input
+                  id="donate-amount-one"
+                  type="text"
+                  placeholder="Write Donation Amount"
+                  class="outline-none border border-[#1111111A] w-full rounded-lg bg-transparent p-4 lg:my-4 my-2"
+                />
+              </div>
+              <button
+                id="donate-btn-one"
+                class="btn bg-[#B4F461] w-full rounded-lg p-4 font-bold"
+              >
+                Donate Now
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col justify-between h-full">
-          <p class="text-lg font-semibold">
-            <span id="total-donate">0</span> BDT
-          </p>
-          <h3 class="text-xl font-bold lg:my-4 my-2">Gaza Crisis Aid Relief</h3>
-          <p class="font-light lg:mb-4 mb-2">
-            The ongoing conflict in Gaza has left countless families without
-            shelter, food, and medical care. Your generous donation can provide
-            essential supplies, such as food, water, and emergency medical kits,
-            to those who are suffering. Every small contribution will make a
-            significant impact.
-          </p>
-          <div>
-            <input
-              id="donate-amaout-one"
-              type="text"
-              placeholder="Write Donation Amount"
-              class="outline-none border border-[#1111111A] w-full rounded-lg bg-transparent p-4 lg:my-4 my-2"
+
+        <!-- Card 2 -->
+        <div
+          class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 border border-[#1111111A] rounded-2xl lg:mt-8 mt-4"
+        >
+          <div class="w-full rounded-xl h-full">
+            <img
+              class="w-full h-full object-cover rounded-xl"
+              src="./assets/d2.jpeg"
             />
           </div>
-          <button
-            id="donate-btn-one"
-            class="btn bg-[#B4F461] w-full rounded-lg p-4 font-bold"
-          >
-            Donate Now
-          </button>
+          <div class="flex flex-col justify-between h-full">
+            <p class="text-lg font-semibold">
+              <span id="total-donate-tow">0</span> BDT
+            </p>
+            <h3 id="donate-title-tow" class="text-xl font-bold lg:my-4 my-2">
+              Emergency Relief for Gaza Families
+            </h3>
+            <p class="font-light lg:mb-4 mb-2">
+              The devastating situation in Gaza has left families in desperate
+              need of basic necessities. Your contribution can provide immediate
+              relief in the form of food, clean water, and medical aid, ensuring
+              survival in these challenging times. Every donation, no matter how
+              small, can make a huge difference in their lives.
+            </p>
+            <div>
+              <input
+                id="donate-amount-tow"
+                type="text"
+                placeholder="Write Donation Amount"
+                class="outline-none border border-[#1111111A] w-full rounded-lg bg-transparent p-4 lg:my-4 my-2"
+              />
+            </div>
+            <button
+              id="donate-btn-tow"
+              class="btn bg-[#B4F461] w-full rounded-lg p-4 font-bold"
+            >
+              Donate Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 border border-[#1111111A] rounded-2xl lg:mt-8 mt-4"
+        >
+          <div class="w-full rounded-xl h-full">
+            <img
+              class="w-full h-full object-cover rounded-xl"
+              src="./assets/d3.jpeg"
+            />
+          </div>
+          <div class="flex flex-col justify-between h-full">
+            <p class="text-lg font-semibold">
+              <span id="total-donate-three">0</span> BDT
+            </p>
+            <h3 id="donate-title-three" class="text-xl font-bold lg:my-4 my-2">
+              Help Save Lives in Gaza: Donate Now
+            </h3>
+            <p class="font-light lg:mb-4 mb-2">
+              Thousands are suffering from lack of medical supplies and shelter
+              in Gaza. Your donation will help provide essential life-saving
+              medical kits, food, and safe drinking water to those in need.
+              Together, we can offer hope to those who need it most.
+            </p>
+            <div>
+              <input
+                id="donate-amount-three"
+                type="text"
+                placeholder="Write Donation Amount"
+                class="outline-none border border-[#1111111A] w-full rounded-lg bg-transparent p-4 lg:my-4 my-2"
+              />
+            </div>
+            <button
+              id="donate-btn-three"
+              class="btn bg-[#B4F461] w-full rounded-lg p-4 font-bold"
+            >
+              Donate Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 border border-[#1111111A] rounded-2xl lg:mt-8 mt-4"
+        >
+          <div class="w-full rounded-xl h-full">
+            <img
+              class="w-full h-full object-cover rounded-xl"
+              src="./assets/d4.jpeg"
+            />
+          </div>
+          <div class="flex flex-col justify-between h-full">
+            <p class="text-lg font-semibold">
+              <span id="total-donate-four">0</span> BDT
+            </p>
+            <h3 id="donate-title-four" class="text-xl font-bold lg:my-4 my-2">
+              Shelter for Gaza: Provide Homes, Hope, and Healing
+            </h3>
+            <p class="font-light lg:mb-4 mb-2">
+              The destruction of homes in Gaza has left many families without
+              shelter. Your donation can help provide temporary housing
+              solutions, such as tents and blankets, along with food and medical
+              aid. Join us in giving them a chance to rebuild their lives
+            </p>
+            <div>
+              <input
+                id="donate-amount-four"
+                type="text"
+                placeholder="Write Donation Amount"
+                class="outline-none border border-[#1111111A] w-full rounded-lg bg-transparent p-4 lg:my-4 my-2"
+              />
+            </div>
+            <button
+              id="donate-btn-four"
+              class="btn bg-[#B4F461] w-full rounded-lg p-4 font-bold"
+            >
+              Donate Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 border border-[#1111111A] rounded-2xl lg:mt-8 mt-4"
+        >
+          <div class="w-full rounded-xl h-full">
+            <img
+              class="w-full h-full object-cover rounded-xl"
+              src="./assets/d5.jpeg"
+            />
+          </div>
+          <div class="flex flex-col justify-between h-full">
+            <p class="text-lg font-semibold">
+              <span id="total-donate-five">0</span> BDT
+            </p>
+            <h3 id="donate-title-five" class="text-xl font-bold lg:my-4 my-2">
+              Stand with Gaza: Together We Can Make a Difference
+            </h3>
+            <p class="font-light lg:mb-4 mb-2">
+              The people of Gaza need us now more than ever. Your donation can
+              provide immediate assistance, including water, food, medical care,
+              and more. Your help will bring hope to those who are struggling to
+              survive during these trying times.
+            </p>
+            <div>
+              <input
+                id="donate-amount-five"
+                type="text"
+                placeholder="Write Donation Amount"
+                class="outline-none border border-[#1111111A] w-full rounded-lg bg-transparent p-4 lg:my-4 my-2"
+              />
+            </div>
+            <button
+              id="donate-btn-five"
+              class="btn bg-[#B4F461] w-full rounded-lg p-4 font-bold"
+            >
+              Donate Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 border border-[#1111111A] rounded-2xl lg:mt-8 mt-4"
+        >
+          <div class="w-full rounded-xl h-full">
+            <img
+              class="w-full h-full object-cover rounded-xl"
+              src="./assets/d6.jpeg"
+            />
+          </div>
+          <div class="flex flex-col justify-between h-full">
+            <p class="text-lg font-semibold">
+              <span id="total-donate-six">0</span> BDT
+            </p>
+            <h3 id="donate-title-six" class="text-xl font-bold lg:my-4 my-2">
+              Rescue Gaza: Emergency Aid for Vulnerable Families
+            </h3>
+            <p class="font-light lg:mb-4 mb-2">
+              With each passing day, the situation in Gaza worsens. Vulnerable
+              families are in urgent need of food, clean water, and medical
+              supplies. Your support can help ease their suffering and offer
+              them a chance at survival. Donate today and be a lifeline for
+              those in need.
+            </p>
+            <div>
+              <input
+                id="donate-amount-six"
+                type="text"
+                placeholder="Write Donation Amount"
+                class="outline-none border border-[#1111111A] w-full rounded-lg bg-transparent p-4 lg:my-4 my-2"
+              />
+            </div>
+            <button
+              id="donate-btn-six"
+              class="btn bg-[#B4F461] w-full rounded-lg p-4 font-bold"
+            >
+              Donate Now
+            </button>
+          </div>
         </div>
       </div>
 
@@ -147,6 +355,9 @@
           </button>
         </div>
       </div>
+
+      <!-- History of Donation -->
+      <div id="history-added" class="hidden mt-6"></div>
     </main>
 
     <!-- JavaScript -->
