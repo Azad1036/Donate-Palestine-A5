@@ -11,6 +11,9 @@ const donateTitlesSix = document.getElementById("donate-title-six").innerText;
 const hide = document
   .getElementById("History")
   .addEventListener("click", function () {
+    const donate = document.getElementById("donation");
+    donate.classList.remove("focus:bg-yellow-400");
+    donate.classList.add("focus:bg-yellow-400");
     const hideCard = document.getElementById("donaion-cards");
     const showhistory = document.getElementById("history-added");
     hideCard.classList.add("hidden");
@@ -21,6 +24,8 @@ const hide = document
 const show = document
   .getElementById("donation")
   .addEventListener("click", function () {
+    const history = document.getElementById("History");
+    history.classList.add("focus:bg-yellow-400");
     const hideCard = document.getElementById("donaion-cards");
     const showhistory = document.getElementById("history-added");
     hideCard.classList.remove("hidden");
