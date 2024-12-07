@@ -31,10 +31,10 @@
     </style>
   </head>
   <body class="bg-[#F9F7F3] lixend-font h-dvh">
-    <header>
+    <header class="fixed w-full bg-[#F9F7F3] z-50 top-0 ">
       <!-- Navbar Section -->
       <nav class="py-6 px-10">
-        <div class="navbar">
+        <div class="navbar  ">
           <div class="navbar-start">
             <div class="dropdown">
               <button tabindex="0" class="btn btn-ghost lg:hidden">
@@ -85,16 +85,15 @@
           </div>
         </div>
       </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main id="main-page" class="lg:py-10 py-5 px-10">
       <!-- Donation Buttons -->
-      <div class="text-center space-x-4">
+      <div class="text-center space-x-4 mt-14 pb-2" id="donate-data">
         <button id="donation" class="btn focus:bg-yellow-400">Donation</button>
         <button id="History" class="btn">History</button>
       </div>
+    </header>
 
+    <!-- Main Content -->
+    <main id="main-page" class=" py-10 px-10 mt-48">
       <!-- Donation Card -->
       <div id="donaion-cards">
         <!-- Card 1 -->
@@ -410,7 +409,7 @@
       </div>
 
       <!-- History of Donation -->
-      <div id="history-added" class="hidden mt-6"></div>
+      <div id="history-added" class="hidden mt-18"></div>
     </main>
 
     <footer class="hidden" id="faq-body">
