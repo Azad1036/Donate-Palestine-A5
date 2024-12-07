@@ -4,70 +4,153 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Palestine</title>
-    
-    <!-- Tailwind Css Cdn -->
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Daisyui Cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-    
-    <!-- Google Font link-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-  
-  <!-- Normal Css -->
-   <style>
-    .lixend-font {
-      font-family: "Lexend", sans-serif;
-    }
-   </style>
-  </head> 
-  <body class="bg-[#F9F7F3] lixend-font ">
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <style>
+      .lixend-font {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#F9F7F3] lixend-font">
     <header>
-      <!-- Navber Section Start -->
+      <!-- Navbar Section -->
       <nav class="py-6 px-10">
         <div class="navbar">
           <div class="navbar-start">
             <div class="dropdown">
-              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <button tabindex="0" class="btn btn-ghost lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor">
+                  stroke="currentColor"
+                >
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16" />
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
                 </svg>
-              </div>
+              </button>
               <ul
                 tabindex="0"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-xl font-semibold">
-                <p>Donate-Palestine</p>
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-xl font-semibold"
+              >
+                <li>Donate-Palestine</li>
               </ul>
             </div>
-            <button class="btn  bg-[#B4F461] text-xl">Blog</button>
+            <a class="btn bg-[#B4F461] text-xl">Blog</a>
           </div>
           <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-              <p class="text-xl font-semibold">Donate-Palestine</p>
-            </ul>
+            <p class="text-xl font-semibold">Donate-Palestine</p>
           </div>
           <div class="navbar-end">
-            <a class="text-[#111111B3] text-xl font-medium"><span>98600</span> BDT</a>
+            <span class="text-[#111111B3] text-xl font-medium">
+              <span id="donate-total-amounts">1000000</span> BDT
+            </span>
           </div>
         </div>
       </nav>
-      <!-- Navber Section End -->
-
-      <main>
-        <!-- Donation & History Btn -->
-         <button></button>
-      </main>
     </header>
+
+    <!-- Main Content -->
+    <main class="lg:py-10 py-5 px-10">
+      <!-- Donation Buttons -->
+      <div class="text-center space-x-4">
+        <button class="btn btn-warning">Donation</button>
+        <button class="btn btn-primary">History</button>
+      </div>
+
+      <!-- Donation Card -->
+      <!-- Card 1 -->
+      <div
+        class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 border border-[#1111111A] rounded-2xl lg:mt-8 mt-4"
+      >
+        <div class="w-full rounded-xl h-full">
+          <img
+            class="w-full h-full object-cover rounded-xl"
+            src="./assets/d1.jpeg"
+            alt="Gaza Crisis Aid"
+          />
+        </div>
+        <div class="flex flex-col justify-between h-full">
+          <p class="text-lg font-semibold">
+            <span id="total-donate">0</span> BDT
+          </p>
+          <h3 class="text-xl font-bold lg:my-4 my-2">Gaza Crisis Aid Relief</h3>
+          <p class="font-light lg:mb-4 mb-2">
+            The ongoing conflict in Gaza has left countless families without
+            shelter, food, and medical care. Your generous donation can provide
+            essential supplies, such as food, water, and emergency medical kits,
+            to those who are suffering. Every small contribution will make a
+            significant impact.
+          </p>
+          <div>
+            <input
+              id="donate-amaout-one"
+              type="text"
+              placeholder="Write Donation Amount"
+              class="outline-none border border-[#1111111A] w-full rounded-lg bg-transparent p-4 lg:my-4 my-2"
+            />
+          </div>
+          <button
+            id="donate-btn-one"
+            class="btn bg-[#B4F461] w-full rounded-lg p-4 font-bold"
+          >
+            Donate Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        id="modal"
+        class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+      >
+        <div
+          class="bg-white rounded-lg shadow-lg max-w-sm sm:max-w-md w-full p-6 text-center"
+        >
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Thanks Brother</h2>
+          <div class="mb-4">
+            <img src="./assets/coin.png" alt="coin icon" class="mx-auto w-10" />
+          </div>
+          <p class="text-sm sm:text-base text-gray-600">
+            Your donation is a gift to humankind. Thank you!
+          </p>
+          <h3 class="text-green-600 font-semibold mt-2 text-base sm:text-lg">
+            Successfully
+          </h3>
+          <button
+            id="closeModal"
+            type="button"
+            class="mt-6 bg-gray-300 hover:bg-gray-400 text-gray-700 font-medium py-2 px-4 rounded-lg"
+          >
+            Close Confirmation
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="./Js/donate.js"></script>
+    <script src="./Js/comonFunction.js"></script>
   </body>
 </html>
