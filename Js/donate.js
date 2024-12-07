@@ -31,9 +31,6 @@ const show = document
 const modal = document.getElementById("modal");
 const closeModal = document.getElementById("closeModal");
 
-// Modal hide
-modal.classList.add("hidden");
-
 // Donation Card Function
 // Card 1
 document
